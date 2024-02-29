@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card" *ngFor="let product of products$ | async">
+    <img class="card__image" src="{{product.image_link}}" alt="card-image">
+    <p class="card__name">{{product.name}}</p>
+    <div class="card__year">
+      <article class="card__year-name">Year:</article>
+      <article class="card__year-value">{{product.updated_at | date: 'YYYY'}}</article>
+    </div>
+    <div class="card__price">
+      <article class="card__price-name">Price:</article>
+      <article class="card__price-amount">{{product.price | currency: 'USD'}}</article>
+    </div>
+    <button
+    [ngClass]="{ 'card__button': !(checkIsAdded(product) | async), 'card__button-active': checkIsAdded(product) | async }"
+      (click)="addToBasket(product)"
+    >
+    {{ (checkIsAdded(product) | async) ? 'Added' : 'Add to basket' }}
+    </button>
+  </div>
+</div>

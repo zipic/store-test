@@ -1,0 +1,88 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  padding-inline: 120px;
+
+  @media(min-width: 800px) and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 80px;
+  }
+
+  @media(min-width: 400px) and (max-width: 799px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding-inline: 40px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 272px;
+  height: 100%;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 10px 5px 5px rgb(228, 228, 228);
+
+  &__image {
+    margin: 28px 64px 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__price {
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 140px;
+
+    &-amount {
+      font-size: 30px;
+      color: rgba(98, 150, 178, 0.87);
+    }
+  }
+
+  &__year {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto;
+    align-items: center;
+    gap: 190px;
+
+  }
+
+  &__button {
+    width: 220px;
+    height: 48px;
+    background: none;
+    border: 1px solid black;
+    margin: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: rgb(144, 180, 199);
+      color: #fff;
+    }
+  }
+  &__button-active {
+    width: 220px;
+    height: 48px;
+    background-color: rgb(144, 180, 199);
+    color: #fff;
+    margin: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+  }
+}

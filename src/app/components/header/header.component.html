@@ -1,0 +1,15 @@
+<div class="header">
+  <a routerLink="/" href="">
+    <img class="header__logo" src="assets/images/logo.svg" alt="">
+  </a>
+  <a routerLink="/" class="header__link" >catalog</a>
+  <a class="header__link" (click)="setIsOpen()">
+    <img class="header__basket" src="assets/images/basket.svg" alt="basket">
+    <div
+      class="header__basket-count"
+      *ngIf="(basketProducts$ | async)?.length"
+    >
+    {{(basketProducts$ | async)?.length}}
+    </div>
+  </a>
+</div>

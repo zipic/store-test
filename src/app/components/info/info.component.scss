@@ -1,0 +1,17 @@
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 100%;
+  height: 100vh;
+  font-size: 50px;
+  color: rgba(98, 150, 178, 0.87);
+
+  &__title {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+  }
+}

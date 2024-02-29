@@ -1,0 +1,22 @@
+.filter {
+
+  &__sort {
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    background: #f9f7f7;
+    cursor: pointer;
+  }
+
+  &__sort option {
+    padding: 8px;
+    background-color: #f9f7f7;;
+    color: #333;
+  }
+
+  &__name {
+    font-size: 20px;
+    color: rgba(98, 150, 178, 0.87);
+  }
+}

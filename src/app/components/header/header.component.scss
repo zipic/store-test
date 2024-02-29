@@ -1,0 +1,44 @@
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 30px;
+  align-items: center;
+  background-color: rgb(228, 228, 228);
+
+  &__link {
+    font-size: 20px;
+    color: rgba(98, 150, 178, 0.87);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 50px;
+    cursor: pointer;
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__basket {
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    &-count {
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      font-size: 15px;
+      color: rgba(98, 150, 178, 0.87);
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 16px;
+      right: 70px;
+    }
+  }
+
+}

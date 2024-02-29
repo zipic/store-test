@@ -1,0 +1,68 @@
+<div class="sorry" *ngIf="(basketProducts$ | async)?.length === 0">
+  <p class="sorry__title">Your basket is empty!</p>
+  <button
+    class="sorry__close"
+    (click)="setIsOpen()"
+  >
+    X
+  </button>
+</div>
+<div class="basket" *ngIf="(basketProducts$ | async)?.length">
+  <section class="basket__cards">
+    <div class="items" *ngFor="let product of basketProducts$ | async">
+      <img class="items__img" src="{{product.products.image_link}}" alt="">
+      <p class="items__name">{{product.products.name}}</p>
+      <button
+        class="items__minus"
+        (click)="onDecrement(product)"
+      >
+        -
+      </button>
+      <p>{{product.count}}</p>
+      <button
+        class="items__plus"
+        (click)="onIncrement(product)"
+      >
+        +
+      </button>
+      <p class="items__price"> {{ (+product.products.price * product.count).toFixed(2)}}</p>
+
+      <button
+        class="items__delete"
+        (click)="deleteItem(product)"
+      >
+        remove
+      </button>
+    </div>
+</section>
+  <section class="basket__total" *ngIf="(basketProducts$ | async)?.length">
+    <h2 class="basket__total-title">Total amount</h2>
+    <p
+      class="basket__total-count"
+    >for {{totalCount}} {{totalCount === 1 ? 'item' : 'items'}}
+    </p>
+    <div class="basket__total-line"></div>
+    <p class="basket__total-price">{{totalAmount.toFixed(2)}} $</p>
+
+    <div class="buttons">
+    <button
+      class="basket__total-buy"
+    >
+      BUY
+    </button>
+    <button
+      class="basket__total-close"
+      (click)="setIsOpen()"
+    >
+      close menu
+    </button>
+    </div>
+  </section>
+
+  <button
+    class="close-basket"
+    (click)="setIsOpen()"
+  >
+    X
+  </button>
+</div>

@@ -1,0 +1,14 @@
+<div class="filter">
+  <p class="filter__name">Sort by:</p>
+  <select
+    class="filter__sort"
+    name="sort"
+    [(ngModel)]="selectedSort"
+    (ngModelChange)="updatedFilterType()"
+  >
+    <option value="" selected disabled hidden>Choose</option>
+    <option value="name">Name</option>
+    <option value="price">Price</option>
+    <option value="reset">Reset</option>
+  </select>
+</div>
