@@ -194,6 +194,7 @@
     background: #f9f7f7;;
     cursor: pointer;
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 
     &:hover {
       transform: scale(1.05);
