@@ -5,6 +5,11 @@
   justify-content: space-between;
   padding-inline: 50px;
   margin-bottom: 100px;
+
+  @media (min-width: 400px) and (max-width: 799px) {
+    align-items: center;
+    padding-inline: 15px;
+  }
 }
 
 .dialog {
@@ -18,4 +23,9 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  box-sizing: border-box;
+
+  @media (min-width: 400px) and (max-width: 799px) {
+
+  }
 }
