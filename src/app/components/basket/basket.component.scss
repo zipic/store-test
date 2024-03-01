@@ -198,6 +198,10 @@
     &:hover {
       transform: scale(1.05);
     }
+
+    @media (min-width: 400px) and (max-width: 799px) {
+      width: 90%;
+    }
   }
 
   &__img {
